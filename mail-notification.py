@@ -212,7 +212,7 @@ Performance Data:  {perfdata}
 <tr><td>State:</td><td>{state} ({state_type})</td></tr>
 <tr><td>Last State:</td><td>{last_state} ({last_state_type})</td></tr>
 <tr><td>Check Output:</td><td>{output}</td></tr>
-<tr><td>Performance Data:</td><td>{perfdata}</td></tr>
+<tr><td valign="top">Performance Data:</td><td>{perfdata}</td></tr>
 <tr><td>&nbsp;</td><td></td></tr>
 '''.format(
         state=state,
