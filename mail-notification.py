@@ -61,7 +61,7 @@ def perfdata_table(perfdata):
                 maximum = ''
             # create html row
             html += '<tr><td>{metric} {uom}</td><td>{val}</td><td>{warn}</td><td>{crit}</td><td>{minimum}</td><td>{maximum}</td></tr>'.format(
-                metric=metric,
+                metric=metric.replace('"', '').replace("'", ''),
                 uom='({})'.format(uom) if uom else '',
                 val=values[0],
                 warn=warn,
