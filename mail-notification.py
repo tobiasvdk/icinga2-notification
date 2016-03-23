@@ -161,6 +161,11 @@ Host:              {hostname} ({hostaddress})
 <html>
 <head>
 <title>Icinga 2 Notification</title>
+<style>
+thead td {{
+    font-weight: bold;
+}}
+</style>
 </head>
 <body>
 <h1><img src='cid:icinga2_logo' alt='Icinga 2'> Notification</h1>
