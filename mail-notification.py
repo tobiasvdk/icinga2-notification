@@ -162,8 +162,15 @@ Host:              {hostname} ({hostaddress})
 <head>
 <title>Icinga 2 Notification</title>
 <style>
+table table {{
+    border-collapse: collapse;
+}}
 thead td {{
     font-weight: bold;
+}}
+table table tr {{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
 }}
 </style>
 </head>
