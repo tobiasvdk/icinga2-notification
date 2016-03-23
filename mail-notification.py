@@ -30,7 +30,7 @@ def perfdata_table(perfdata):
     '''
 
     html = '<table><thead><tr>'
-    html += '<td>Metric</td><td>Value</td><td>Warning</td><td>Critical</td><td>Minimum/td><td>Maximum</td>'
+    html += '<td>Metric</td><td>Value</td><td>Warning</td><td>Critical</td><td>Minimum</td><td>Maximum</td>'
     html += '</tr></thead><tbody>'
     if perfdata:
         result = re.findall(r'\s?(.+?=\S+)', perfdata)
