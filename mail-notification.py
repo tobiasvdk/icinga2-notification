@@ -147,13 +147,11 @@ def main():
 
     # start
     text = '''
-***** Icinga 2 Notification *****
-
-Notification Type: {notification_type}
+***** Icinga 2 {notification_type} Notification *****
 
 Host:              {hostname} ({hostaddress})
 '''.format(
-        notification_type=notification_type,
+        notification_type=notification_type.capitalize(),
         hostname=host_name,
         hostaddress=host_address)
 
@@ -175,13 +173,11 @@ table table tr {{
 </style>
 </head>
 <body>
-<h1><img src='cid:icinga2_logo' alt='Icinga 2'> Notification</h1>
+<h1><img src='cid:icinga2_logo' alt='Icinga 2'> {notification_type} Notification</h1>
 <table>
-<tr><td>Notification Type:</td><td>{notification_type}</td></tr>
-<tr><td>&nbsp;</td><td></td></tr>
 <tr><td>Host:</td><td>{hostname} ({hostaddress})</td></tr>
 '''.format(
-        notification_type=notification_type,
+        notification_type=notification_type.capitalize(),
         hostname=host_name,
         hostaddress=host_address
     )
