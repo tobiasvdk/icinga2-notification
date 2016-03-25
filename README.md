@@ -7,7 +7,7 @@ Use the following NotificationCommands:
     object NotificationCommand "service-mail-notification" {
         import "plugin-notification-command"
     
-        command = [ SysconfDir + "/icinga2/scripts/pb-mail-notification.py",
+        command = [ SysconfDir + "/icinga2/scripts/mail-notification.py",
             "-s", FromEmail,
             "-r", "$user.email$",
             "-t", "Service" ]
@@ -35,7 +35,7 @@ Use the following NotificationCommands:
     object NotificationCommand "host-mail-notification" {
         import "plugin-notification-command"
     
-        command = [ SysconfDir + "/icinga2/scripts/pb-mail-notification.py",
+        command = [ SysconfDir + "/icinga2/scripts/mail-notification.py",
             "-s", FromEmail,
             "-r", "$user.email$",
             "-t", "Host" ]
