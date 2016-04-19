@@ -291,9 +291,9 @@ Acknowledge:       {ack_url}
     msg.attach(mime_img)
 
     # send email for testing
-    s = smtplib.SMTP(SMTP_HOST)
-    s.sendmail(args.sender, args.recipient, msg.as_string())
-    s.quit()
+    smpt_conn = smtplib.SMTP(SMTP_HOST)
+    smpt_conn.sendmail(args.sender, args.recipient, msg.as_string())
+    smpt_conn.quit()
 
 if __name__ == '__main__':
     main()
