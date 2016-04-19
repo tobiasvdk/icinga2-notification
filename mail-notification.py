@@ -150,7 +150,7 @@ def main():
 ***** Icinga 2 {notification_type} Notification *****
 
 Host:              {hostname} ({hostaddress})
-'''.format(
+    '''.format(
         notification_type=notification_type.capitalize(),
         hostname=host_name,
         hostaddress=host_address)
@@ -176,7 +176,7 @@ table table tr {{
 <h1><img src='cid:icinga2_logo' alt='Icinga 2'> {notification_type} Notification</h1>
 <table>
 <tr><td>Host:</td><td>{hostname} ({hostaddress})</td></tr>
-'''.format(
+    '''.format(
         notification_type=notification_type.capitalize(),
         hostname=host_name,
         hostaddress=host_address
@@ -185,10 +185,10 @@ table table tr {{
     if args.object_type == 'Service':
         text += '''
 Service:           {}
-'''.format(service_displayname)
+    '''.format(service_displayname)
         html += '''
 <tr><td>Service:</td><td>{}</td></tr>
-'''.format(service_displayname)
+    '''.format(service_displayname)
 
     text += '''
 State:             {state} ({state_type})
@@ -196,7 +196,7 @@ Last State:        {last_state} ({last_state_type})
 Check Output:      {output}
 Performance Data:  {perfdata}
 
-'''.format(
+    '''.format(
         state=state,
         state_type=state_type,
         last_state=last_state,
@@ -210,7 +210,7 @@ Performance Data:  {perfdata}
 <tr><td valign="top">Check Output:</td><td>{output}</td></tr>
 <tr><td valign="top">Performance Data:</td><td>{perfdata}</td></tr>
 <tr><td>&nbsp;</td><td></td></tr>
-'''.format(
+    '''.format(
         state=state,
         state_type=state_type,
         last_state=last_state,
@@ -222,7 +222,7 @@ Performance Data:  {perfdata}
     text += '''
 Last Check:        {last_check}
 Duration:          {duration} hours (since {problem_time})
-'''.format(
+    '''.format(
         last_check=last_check,
         duration=str(duration),
         problem_time=problem_time
@@ -230,7 +230,7 @@ Duration:          {duration} hours (since {problem_time})
     html += '''
 <tr><td>Last Check:</td><td>{last_check}</td></tr>
 <tr><td>Duration:</td><td>{duration} hours (since {problem_time})</td></tr>
-'''.format(
+    '''.format(
         last_check=last_check,
         duration=str(duration),
         problem_time=problem_time
@@ -240,41 +240,42 @@ Duration:          {duration} hours (since {problem_time})
         text += '''
 Comment:           {comment}
 Author:            {author}
-'''.format(
+    '''.format(
         comment=comment,
         author=author
     )
         html += '''
 <tr><td>Comment:</td><td>{comment}</td></tr>
 <tr><td>Author:</td><td>{author}</td></tr>
-'''.format(
+    '''.format(
         comment=comment,
         author=author
     )
 
     text += '''
 Show Details:      {details_url}
-'''.format(details_url=details_url)
+    '''.format(details_url=details_url)
 
     html += '''
 <tr><td>&nbsp;</td><td></td></tr>
-<tr><td>Actions:</td><td><a href="{details_url}">Show Details</a>'''.format(
+<tr><td>Actions:</td><td><a href="{details_url}">Show Details</a>
+    '''.format(
         details_url=details_url
     )
 
     if notification_type not in ['RECOVERY', 'DOWNTIME', 'FLAPPINGSTART', 'FLAPPINGEND']:
         text += '''
 Acknowledge:       {ack_url}
-'''.format(ack_url=ack_url)
+    '''.format(ack_url=ack_url)
         html += ', <a href="{ack_url}">Acknowledge</a>'.format(
-        ack_url=ack_url
-    )
+            ack_url=ack_url
+        )
 
     html += '''</td></tr>
 </table>
 </body>
 </html>
-'''
+    '''
 
     # read log data
     img_filename = '/usr/share/icingaweb2/public/img/logo_icinga.png'
